@@ -1,8 +1,15 @@
-
+:root {
+    --dashboard_color:#3b82f6;
+    --projects_border_color:#eab308;
+    --Upload_New_Share_buttons:#075985;
+    --white_color:white;
+    --content_background_color:#9ca3af;
+}
 body {
     display: grid;
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 20rem 5rem 50rem;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 16rem 2rem 66rem;
+    margin: 0px;
 }
 .header {
     display: grid;
@@ -15,9 +22,17 @@ body {
     grid-template-rows: repeat(3, 1fr);
     grid-column: 2;
     gap: 20px;
+    background-color: var(--content_background_color);
 }
 .projects {
-    grid-column: 1;
+    background-color: var(--white_color);
+    border: solid var(--content_background_color) 2px;
+    display: grid;
+    justify-content: center;
+    width: 30rem;
+    border-left:solid var(--projects_border_color) 10px ;
+    margin: 10px;
+    height: 10.2rem;
 }
 .Trending {
     grid-column: 2;
@@ -36,7 +51,9 @@ body {
 }
 .sidebar {
     display: grid;
-    grid-row: 1;
+    grid-row: 1/3;
+    background-color: var(--dashboard_color);
+    justify-content: center;
 }
 .dashboard {
     grid-row: 1;
@@ -44,22 +61,28 @@ body {
 .top {
     grid-column: 2;
     display: grid;
-    grid-template-columns: 1fr 600px
+    grid-template-columns: 1fr 700px;
+    font-size: 28px;
+    background-color: var(--content_background_color);
 }
 .dashboard_items {
     display: grid;
     grid-template-rows: repeat(5,40px) 80px repeat(2,40px);
     grid-row: 3;
-}
-button {
-    width: 10%;
+    background-color: var(--dashboard_color);
+    font-size: 2rem;
+    justify-content: center;
+    gap: 2px;
 }
 input {
-    width: 40%;
+    width: 85%;
     grid-column: 1;
+    height: 2rem;
 }
 .profile {
     display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .HI {
     display: flex;
@@ -68,6 +91,7 @@ input {
 .Buttons_for_header {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 .Profiles {
     display: flex;
@@ -75,9 +99,31 @@ input {
 }
 .button {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     gap: 10px;
 }
 p {
     margin: 0px;
+}
+a {
+    color: var(--white_color);
+    text-decoration: none;
+}
+#Media_buttons {
+    background-color: var(--Upload_New_Share_buttons);
+    color: var(--white_color);
+    width: 5rem;
+    height: 2.5rem;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.Announcements {
+    background-color: var(--white_color);
+    margin: 20px;
+    padding-left: 40px;
+    width: 15rem;
 }
